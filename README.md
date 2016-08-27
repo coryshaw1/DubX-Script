@@ -1,4 +1,5 @@
 # Dub X (source)
+*DubXScript may be going offline permanently due to recent interactions with one of Dubtrack.fm's staff members*
 - A simple script/extension for Dubtrack.fm
 
 [Follow Us on Twitter](https://twitter.com/DubXScript) and [Like Us on Facebook!](https://facebook.com/DubXScript)
@@ -10,7 +11,6 @@ Our Team
  - [sinful](https://github.com/sinfulBA) __(Owner/Developer)__
  - [Swordling](https://github.com/swordling) __(Owner/Developer)__
  - [Kris](https://github.com/PossiblyKris) __(Helper/Developer)__
- - [Al3366](https://github.com/Al3366) __(Helper/Extension Manager)__
  - [Ciscog](https://github.com/FranciscoG) __(Helper/Developer)__
  - [mbsurfer](https://github.com/coryshaw1) __(Helper/Developer)__
 
@@ -18,16 +18,17 @@ Our Team
 IMPORTANT
 ---
 
-__Updates (Version 03.02.04)__
+__Updates (Version 03.05.00)__
 
-- Added ability to set custom text phrases that trigger a mention sound
-- Notifications now check for custom mention triggers as well
+ - Add ability to see dub vote information whenever hovering over the corresponding vote buttons
+ - Add option to see dub votes on your song as chat notifications
+ - __**NOTE*:__ All downdub vote information is only visible to mods and higher
 
 -----------------
 Usage
 ---
 
-* Bookmark the following code from the [Dub X Website](https://dubx.net) or the script below. Once in a Dubtrack.fm community, run the bookmark. We also have a Google Chrome extension [here](https://chrome.google.com/webstore/detail/dubx/oceofndagjnpebjmknefoelcpcnpcedm/related?utm_source=chrome-app-launcher-info-dialog)
+* Bookmark the following code from the [Dub X Website](https://dubx.net) or the script below. Once in a Dubtrack.fm community, run the bookmark. We also have a Google Chrome extension [here](https://chrome.google.com/webstore/detail/dubx/oceofndagjnpebjmknefoelcpcnpcedm?utm_source=chrome-app-launcher-info-dialog)
 
 ```
 javascript:(function(){$.getScript('https://rawgit.com/sinfulBA/DubX-Script/master/beta.js');}());
@@ -46,12 +47,15 @@ Features
 ---
 
 - Autovote
-- AFK Autorespond
+- AFK Autorespond with Custom Message
 - Emotes
 - Autocomplete Emoji
 - Autocomplete Mentions
 - Custom Mention Triggers
 - Notification on Mentions
+- Dub Vote Information When Hovering Vote Buttons
+- Updub Chat Notification When DJ
+- Downdub Chat Notification When DJ (Mod Only)
 - Fullscreen Video
 - Split Chat
 - Hide Chat
