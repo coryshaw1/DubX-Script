@@ -1332,14 +1332,14 @@ if (!hello_run && Dubtrack.session.id) {
                 hello.on('.autocomplete_mentions');
 
                 //Remove keydown and input event chat view to replace with our event
-                Dubtrack.room.chat.delegateEvents(_(Dubtrack.room.chat.events).omit('keydown #chat-txt-message', 'input #chat-txt-message'));
+                Dubtrack.room.chat.delegateEvents(_.omit(Dubtrack.room.chat.events, ['keydown #chat-txt-message', 'input #chat-txt-message']));
             } else {
                 options.let_autocomplete_mentions = false;
                 hello.option('autocomplete_mentions', 'false');
                 hello.off('.autocomplete_mentions');
 
                 //Readd dubtrack's input event chat view for their automplete
-                Dubtrack.room.chat.delegateEvents(_(Dubtrack.room.chat.events).omit('keydown #chat-txt-message'));
+                Dubtrack.room.chat.delegateEvents(_.omit(Dubtrack.room.chat.events, 'keydown #chat-txt-message'));
             }
         },
         mentionNotifications: function(){
@@ -2053,11 +2053,11 @@ if (!hello_run && Dubtrack.session.id) {
         userAutoComplete: function(){
             if(options.let_autocomplete_mentions) {
                 //Remove keydown and input event chat view to replace with our event
-                Dubtrack.room.chat.delegateEvents(_(Dubtrack.room.chat.events).omit('keydown #chat-txt-message', 'input #chat-txt-message'));
+                Dubtrack.room.chat.delegateEvents(_.omit(Dubtrack.room.chat.events, ['keydown #chat-txt-message', 'input #chat-txt-message']));
             }
             else {
                 //Only remove keydown for Dubtrack native autocomplete to work
-                Dubtrack.room.chat.delegateEvents(_(Dubtrack.room.chat.events).omit('keydown #chat-txt-message'));
+                Dubtrack.room.chat.delegateEvents(_.omit(Dubtrack.room.chat.events, 'keydown #chat-txt-message'));
             }
 
             $(document.body).on('keydown', "#chat-txt-message", hello.chatInputKeydownFunc);
